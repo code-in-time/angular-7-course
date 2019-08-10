@@ -1,4 +1,49 @@
-# Ng7
+# Learn angular notes
+## Install
+- npm install -g @angular/cli
+
+## Video url
+- https://www.youtube.com/watch?v=5wtnKulcquA
+
+## Create new app
+- $ ng new myNewApp
+- ? Would you like to add Angular routing? Yes
+- ? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss  
+
+## Load the app
+- ng serve -o
+
+## build a component
+- ng generate component myNav
+### shorthand
+- ng g c about
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Ng7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
