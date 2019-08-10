@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  h1StyleBool:Boolean= true
+
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   firstClick() {
     console.log('test')
+    this.h1StyleBool = !this.h1StyleBool
   }
 
 }

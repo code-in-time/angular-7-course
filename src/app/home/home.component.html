@@ -1,5 +1,9 @@
 <p>home works!</p>
 
-<h1>Home</h1>
+<h1 [class.grey]="h1StyleBool">Home</h1>
+<hr [ngClass]="{
+    'grey': h1StyleBool,
+    'large': !h1StyleBool
+}">
 
 <button (click)="firstClick()">click</button>
