@@ -7,3 +7,13 @@
 }">
 
 <button (click)="firstClick()">click</button>
+
+
+<ul *ngIf="users">
+    <li *ngFor="let item of users.data">
+        <div>{{item.id}}</div>
+        <p><a [href]="item.email">{{item.email}}</a></p>
+        <img [src]="item.avatar" alt="">
+
+    </li>
+</ul>

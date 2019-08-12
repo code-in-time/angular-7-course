@@ -19,11 +19,17 @@
 ### shorthand
 - ng g c about
 
+## make a service
+- ng g s data
+
 -----
 
 
 
 
+## type script help
+https://json-to-js.com/
+http://json2ts.com/
 
 
 
