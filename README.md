@@ -22,6 +22,10 @@
 ## make a service
 - ng g s data
 
+## build
+- ng build
+- ng build --prod
+
 -----
 
 
