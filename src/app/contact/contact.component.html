@@ -20,8 +20,22 @@
       </div>
     </label>
 
-    <input type="submit" value="Send message" class="cta">
+    <label>
+      Gender:<br><br>
+      Male<br>
+      <input type="radio" value="male" formControlName="gender" >
+      Female<br>
+      <input type="radio" value="female" formControlName="gender" >
+      <div *ngIf="submitted && messageForm.controls.gender.errors" class="error">
+          <div *ngIf="messageForm.controls.gender.errors.required">A gender is required</div>
+        </div>
+    </label>
 
+    <div *ngIf="messageForm.get('gender').value ==='male'">
+      show this
+    </div>
+    
+    <input type="submit" value="Send message" class="cta">
   </form>
 
   <div *ngIf="submitted" class="results">
