@@ -32,8 +32,11 @@ onSubmit() {
 }
 
   ngOnInit() {
-    // TODO: set for value??
-    // this.messageForm.name.setValue('set this')
+    // Set values on load
+    this.messageForm.setValue({
+      name: 'hello',
+      message: '87878787'
+    })
   }
 
 }
