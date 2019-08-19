@@ -39,7 +39,11 @@ http://json2ts.com/
 
 
 
+## chrome extensions
+https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd
 
+## vscode extensions
+https://marketplace.visualstudio.com/items?itemName=Angular.ng-template
 
 
 

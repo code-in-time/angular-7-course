@@ -1,6 +1,10 @@
 <p>about works! {{counter}}</p>
 
-<app-area [count]=counter></app-area>
+<app-area
+    [count]=counter
+    (areaNameEmit)=areaEmitHandler($event)
+    (count1)=count1ChangedHandler($event)>
+</app-area>
 
 <br /><br />
 

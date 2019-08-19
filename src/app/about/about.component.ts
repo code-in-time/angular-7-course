@@ -18,4 +18,13 @@ export class AboutComponent implements OnInit {
     this.counter ++;
   }
 
+  areaEmitHandler(name: string) {
+    console.log(name)
+  }
+
+  count1ChangedHandler(count: number) {
+    // this.ClickCounter = count;
+    console.log(count);
+  }
+
 }
