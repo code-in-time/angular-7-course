@@ -11,7 +11,7 @@ export class AreaComponent implements OnInit {
   // The Child Component expects the count to come from the Parent Component. Hence in ChildComponent decorate the count property with @Input decorator
   @Input() count: number;
 
-  @Output() count1: EventEmitter<number> = new EventEmitter();
+  @Output() countOfArea: EventEmitter<number> = new EventEmitter();
   @Output() areaNameEmit: EventEmitter<string> = new EventEmitter();
 
   myAreaSum: number = 0;
@@ -29,7 +29,7 @@ export class AreaComponent implements OnInit {
 
   countTheArea() {
     this.myAreaSum = this.count + Math.random()
-    this.areaNameEmit.emit('name1');
+    this.countOfArea.emit(this.myAreaSum);
   }
 
 }

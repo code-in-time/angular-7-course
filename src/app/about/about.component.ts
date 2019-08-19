@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   counter: number = 5
+  countOfAreaNumber = 0
 
   constructor() { }
 
@@ -22,9 +23,10 @@ export class AboutComponent implements OnInit {
     console.log(name)
   }
 
-  count1ChangedHandler(count: number) {
+  countOfAreaHandler(x: number) {
     // this.ClickCounter = count;
-    console.log(count);
+    console.log(x);
+    this.countOfAreaNumber = x
   }
 
 }
