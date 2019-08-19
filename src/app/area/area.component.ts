@@ -21,6 +21,11 @@ export class AreaComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges(changes: any) {
+    console.log(changes, 'xxxxxxx');
+    changes.count ? this.countTheArea() : null
+  }
+
   showAreaName() {
     this.areaNameEmit.emit('name1');
     console.log('click')
