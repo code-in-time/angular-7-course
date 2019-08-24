@@ -1,6 +1,17 @@
 <p>page-todo works!</p>
 
 <div class="row">
-    <div class="col">1</div>
-    <div class="col">2</div>
+    <!-- Left col -->
+    <div class="col">
+        <div class="list-group">
+            <button (click)="btnLeftListItemClick(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button>
+        </div>
+    </div>
+
+    <!-- Right col -->
+    <div class="col">
+        <div class="list-group">
+            <button (click)="btnRightListItemClick(item.id)" *ngFor="let item of listRight; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button>
+        </div>
+    </div>
 </div>
