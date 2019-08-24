@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AreaComponent } from '../area/area.component';
 
 @Component({
   selector: 'app-about',
@@ -9,10 +10,12 @@ export class AboutComponent implements OnInit {
 
   counter: number = 5
   countOfAreaNumber = 0
+  @ViewChild('child', {static: false}) child: AreaComponent;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.child, 'child')
   }
 
   countIt () {
@@ -27,6 +30,10 @@ export class AboutComponent implements OnInit {
     // this.ClickCounter = count;
     console.log(x);
     this.countOfAreaNumber = x
+  }
+
+  clickChildHandler() {
+    console.log('yyyyyyy')
   }
 
 }

@@ -35,6 +35,7 @@ export class AreaComponent implements OnInit {
   countTheArea() {
     this.myAreaSum = this.count + Math.random()
     this.countOfArea.emit(this.myAreaSum);
+    console.log('child', this)
   }
 
 }

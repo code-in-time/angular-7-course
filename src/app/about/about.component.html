@@ -1,6 +1,7 @@
 <p>about works! {{counter}}</p>
 
 <app-area
+    #child
     [count]=counter
     (areaNameEmit)=areaEmitHandler($event)
     (countOfArea)=countOfAreaHandler($event)>
@@ -11,3 +12,6 @@
 <br /><br />
 
 <button (click)=countIt()>click count ++ {{counter}}</button>
+<br>
+<br>
+<button (click)=clickChildHandler()>click child</button>
