@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,43 @@ export class DataService {
 
   getUsers() {
     return this.http.get('https://reqres.in/api/users')
+  }
+
+  sendAnEmail() {
+    const opts =
+      {
+        "personalizations": [
+          {
+            "to": [
+              {
+                "email": "andrew.crawford.za@gmail.com"
+              }
+            ],
+            "subject": "Hello, World!"
+          }
+        ],
+        "from": {
+          "email": "from_address@example.com"
+        },
+        "content": [
+          {
+            "type": "text/plain",
+            "value": "Hello, World!"
+          }
+        ]
+      }
+
+
+
+
+    return this.http.post('https://api.sendgrid.com/v3/mail/send HTTP/1.1',
+      opts,
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Authorization': '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'
+        })
+      }
+    )
   }
 }
