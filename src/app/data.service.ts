@@ -48,7 +48,7 @@ export class DataService {
       {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
-          'Authorization': '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'
+          'Authorization': ''
         })
       }
     )
