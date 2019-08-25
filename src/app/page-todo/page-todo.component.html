@@ -3,18 +3,23 @@
 <div class="row">
     <!-- Left col -->
     <div class="col">
-        <div class="list-group">
-            <button (click)="btnLeftListItemClick(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button>
-        </div>
+        <app-todo-left
+            [listLeft]=listLeft
+            [listRight]=listRight
+            (btnLeftEmitEvent)=btnLeftEmitHandler($event)></app-todo-left>
     </div>
 
     <!-- Right col -->
     <div class="col">
-        <div class="list-group">
-            <button (click)="btnRightListItemClick(item.id)" *ngFor="let item of listRight; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button>
-        </div>
+        <app-todo-right
+        [listLeft]=listLeft
+        [listRight]=listRight
+        (btnRightEmitEvent)=btnRightEmitHandler($event)></app-todo-right>
     </div>
 </div>
 
 
 <button (click)="btnSendEmail()">send</button>
+
+
+

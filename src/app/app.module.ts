@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AreaComponent } from './area/area.component';
 import { PageTodoComponent } from './page-todo/page-todo.component';
+import { TodoLeftComponent } from './page-todo/todo-left/todo-left.component';
+import { TodoRightComponent } from './page-todo/todo-right/todo-right.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PageTodoComponent } from './page-todo/page-todo.component';
     ContactComponent,
     HomeComponent,
     AreaComponent,
-    PageTodoComponent
+    PageTodoComponent,
+    TodoLeftComponent,
+    TodoRightComponent
   ],
   imports: [
     BrowserModule,
