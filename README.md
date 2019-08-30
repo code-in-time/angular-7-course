@@ -46,6 +46,10 @@ https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhc
 https://marketplace.visualstudio.com/items?itemName=Angular.ng-template
 
 
+## State management
+npm install @ngrx/store
+
+https://ngrx.io/guide/store
 
 
 

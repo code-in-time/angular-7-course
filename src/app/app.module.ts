@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './stateMan/reducer/counter.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { AreaComponent } from './area/area.component';
 import { PageTodoComponent } from './page-todo/page-todo.component';
 import { TodoLeftComponent } from './page-todo/todo-left/todo-left.component';
 import { TodoRightComponent } from './page-todo/todo-right/todo-right.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,23 @@ import { TodoRightComponent } from './page-todo/todo-right/todo-right.component'
     AreaComponent,
     PageTodoComponent,
     TodoLeftComponent,
-    TodoRightComponent
+    TodoRightComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    StoreModule.forRoot(
+      {
+        count: counterReducer
+      }
+    ),
+    StoreDevtoolsModule.instrument({
+      maxAge: 10
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
