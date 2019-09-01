@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './stateMan/reducer/counter.reducer';
+import { todoReducer } from "./stateMan/reducer/todo.reducer";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -40,7 +41,8 @@ import { CounterComponent } from './counter/counter.component';
     NgbModule,
     StoreModule.forRoot(
       {
-        count: counterReducer
+        count: counterReducer,
+        todo: todoReducer
       }
     ),
     StoreDevtoolsModule.instrument({

@@ -1,3 +1,36 @@
+
+
+<div class="row">
+    <!-- Left col -->
+    <div class="col">
+        <div class="list-group">
+            <!-- <button (click)="btnLeftHandler(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button> -->
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" *ngFor="let item of (listLeft$ | async)" class="list-group-item list-group-item-action">tt</button>
+        </div>
+    </div>
+
+    <!-- Right col -->
+    <div class="col">
+        <div class="list-group">
+            <!-- <button (click)="btnLeftHandler(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button> -->
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button type="button" class="list-group-item list-group-item-action">tt</button>
+        </div>
+    </div>
+</div>
+
+
+
+<hr>
+
+
 <p>counter works!</p>
 
 
