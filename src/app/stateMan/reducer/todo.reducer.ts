@@ -22,7 +22,7 @@ export const selectData = (state: TodoState) => state.data
 //   (state: {listLeft: TodoItem[]}) => state.listLeft
 // )
  
-export function todoReducer(state = initialState, action: todoActions.TodoAdd) {
+export function todoReducer(state = initialState, action: any) {
   // return _todoReducer(state, action);
   switch (action.type) {
     case todoActions.TODO_ADD:
@@ -31,10 +31,19 @@ export function todoReducer(state = initialState, action: todoActions.TodoAdd) {
           // data: this.data.push(new TodoItem(0, 'txt1'))
           data: {
             // listLeft: [...state.data.listLeft, new TodoItem(0, 'txt1')]
-            listLeft: [...state.data.listLeft, action.payload]
+            listLeft: state.data.listLeft.filter(item => item.id != action.payload.id),
+            listRight: [...state.data.listRight, action.payload]
           }
         }
-      break;
+
+      case todoActions.TODO_REMOVE:
+          return {
+            ...state,
+            data: {
+              listRight: state.data.listRight.filter(item => item.id != action.payload.id),
+              listLeft: [...state.data.listLeft, action.payload]
+            }
+          }
   
     default:
       return state
