@@ -16,11 +16,6 @@ export const initialState: TodoState = {
     }};
  
 export const selectData = (state: TodoState) => state.data
-
-// export const selectListLeft = createSelector(
-//   selectData,
-//   (state: {listLeft: TodoItem[]}) => state.listLeft
-// )
  
 export function todoReducer(state = initialState, action: any) {
   // return _todoReducer(state, action);

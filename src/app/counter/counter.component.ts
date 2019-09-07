@@ -15,26 +15,19 @@ export class CounterComponent implements OnInit {
   count$: Observable<number>;
   data$: Observable<TodoState>;
   listLeft$ : Observable<TodoItem[]>;
+  listLeft: TodoItem[]
+  listRight: TodoItem[]
 
   constructor(private store: Store<{count: number, todo: TodoState}>) {
-
-    // console.log('store', store)
-    // console.log('selectData', selectData(store))
-    // console.log('selectListLeft', selectListLeft)
-    // this.leftList$ = this.store.select('data')
+    store.select('todo').subscribe(data => {
+      // get the data from the reducer
+      this.listLeft =  data.data.listLeft
+      this.listRight = data.data.listRight
+    })
   }
   
   ngOnInit() {
     this.count$ = this.store.pipe(select('count'));
-    this.listLeft$ = this.store.pipe(select('todo', 'data', 'leftList$'));
-    // this.data$ = this.store.select('todo')
-    // this.listLeft$ = this.store.select('todo', 'data', 'leftList$')
-
-    // show the value of the item in the state
-    // this.data$.subscribe((x: TodoState) => console.log('this.data$', x.data.listLeft))
-
-    console.log('listLeft', this.listLeft$)
-    console.log('count', this.count$)
   }
 
   increment() {
@@ -50,14 +43,14 @@ export class CounterComponent implements OnInit {
   }
 
 
-  clickTodoAdd(todoID : number) {
+  clickTodoAdd(item : TodoItem) {
     console.log('clickTodoAdd')
-    this.store.dispatch(actionTodoAdd({payload: new TodoItem(1, 'ggggg')}));
+    this.store.dispatch(actionTodoAdd({payload: item}));
   }
 
-  clickTodoRemove(todoID : number) {
+  clickTodoRemove(item : TodoItem) {
     console.log('clickTodoAdd')
-    this.store.dispatch(actionTodoRemove({payload: new TodoItem(1, 'ggggg')}));
+    this.store.dispatch(actionTodoRemove({payload: item}));
   }
 
 }

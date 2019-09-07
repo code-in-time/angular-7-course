@@ -3,27 +3,26 @@
 <div class="row">
     <!-- Left col -->
     <div class="col">
-        <div class="list-group" *ngFor="let item of (listLeft$ | async)">
-            <!-- <button (click)="btnLeftHandler(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button> -->
-            <button type="button" class="list-group-item list-group-item-action">{{item.id}}  {{item.textVal}}</button>
+        <div class="list-group" *ngFor="let item of listLeft">
+            <button
+                type="button"
+                class="list-group-item list-group-item-action"
+                (click)="clickTodoAdd(item)"
+            >{{item.id}}  {{item.textVal}}</button>
         </div>
     </div>
 
     <!-- Right col -->
     <div class="col">
-        <div class="list-group">
+        <div class="list-group" *ngFor="let item of listRight">
             <!-- <button (click)="btnLeftHandler(item.id)" *ngFor="let item of listLeft; index as i;" type="button" class="list-group-item list-group-item-action">{{item.id}} {{item.textVal}}</button> -->
-            <button type="button" class="list-group-item list-group-item-action">tt</button>
-            <button type="button" class="list-group-item list-group-item-action">tt</button>
-            <button type="button" class="list-group-item list-group-item-action">tt</button>
-            <button type="button" class="list-group-item list-group-item-action">tt</button>
-            <button type="button" class="list-group-item list-group-item-action">tt</button>
+            <button
+                type="button"
+                class="list-group-item list-group-item-action"
+                (click)="clickTodoRemove(item)"
+            >{{item.id}}  {{item.textVal}}</button>
         </div>
     </div>
-
-    <button type="button" class="list-group-item list-group-item-action" (click)="clickTodoAdd(1)">click +</button>
-
-    <button type="button" class="list-group-item list-group-item-action" (click)="clickTodoRemove(1)">click -</button>
 </div>
 
 

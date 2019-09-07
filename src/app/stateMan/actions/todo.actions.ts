@@ -9,27 +9,6 @@ import TodoItem from '../../../models/TodoItem'
 
 export const TODO_ADD = 'TODO_ADD';
 export const TODO_REMOVE = 'TODO_REMOVE';
-// export const todoUndo = createAction('[todo] todoUndo');
-// export const todoReset = createAction('[todo] todoReset');
-
-
-// export const actionTodoAdd = (todoID: number): Action => (
-//     {
-//         action: TODO_ADD,
-//         payload: todoID
-//     }
-// )
-
-
-
-
-// export class TodoAdd implements Action {
-
-//     constructor(public payload: number) { }
-
-//     readonly type = TODO_ADD
-// }
-
 
 export const actionTodoAdd = createAction(
     TODO_ADD,
