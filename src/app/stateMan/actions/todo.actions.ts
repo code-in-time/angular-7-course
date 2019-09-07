@@ -12,12 +12,12 @@ export const TODO_REMOVE = 'TODO_REMOVE';
 
 export const actionTodoAdd = createAction(
     TODO_ADD,
-    props<{payload: ITodoItem}>()
+    props<{payload: number}>()
 )
 
 export const actionTodoRemove = createAction(
     TODO_REMOVE,
-    props<{payload: ITodoItem}>()
+    props<{payload: number}>()
 )
 
 

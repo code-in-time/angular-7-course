@@ -7,7 +7,7 @@
             <button
                 type="button"
                 class="list-group-item list-group-item-action"
-                (click)="clickTodoAdd(item)"
+                (click)="clickTodoAdd(item.id)"
             >{{item.id}}  {{item.textVal}}</button>
         </div>
     </div>
@@ -19,7 +19,7 @@
             <button
                 type="button"
                 class="list-group-item list-group-item-action"
-                (click)="clickTodoRemove(item)"
+                (click)="clickTodoRemove(item.id)"
             >{{item.id}}  {{item.textVal}}</button>
         </div>
     </div>

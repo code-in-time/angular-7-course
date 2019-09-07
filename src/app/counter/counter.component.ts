@@ -42,14 +42,14 @@ export class CounterComponent implements OnInit {
     this.store.dispatch(reset());
   }
 
-  clickTodoAdd(item : TodoItem) {
+  clickTodoAdd(id : number) {
     console.log('clickTodoAdd')
-    this.store.dispatch(actionTodoAdd({payload: item}));
+    this.store.dispatch(actionTodoAdd({payload: id}));
   }
 
-  clickTodoRemove(item : TodoItem) {
+  clickTodoRemove(id : number) {
     console.log('clickTodoAdd')
-    this.store.dispatch(actionTodoRemove({payload: item}));
+    this.store.dispatch(actionTodoRemove({payload: id}));
   }
 
 }
