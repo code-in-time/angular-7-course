@@ -1,5 +1,5 @@
 import { createAction, Action, props,  } from '@ngrx/store';
-import TodoItem from '../../../models/TodoItem'
+import {ITodoItem} from '../../../models/TodoItem'
 
 
 // actions
@@ -12,12 +12,12 @@ export const TODO_REMOVE = 'TODO_REMOVE';
 
 export const actionTodoAdd = createAction(
     TODO_ADD,
-    props<{payload: TodoItem}>()
+    props<{payload: ITodoItem}>()
 )
 
 export const actionTodoRemove = createAction(
     TODO_REMOVE,
-    props<{payload: TodoItem}>()
+    props<{payload: ITodoItem}>()
 )
 
 

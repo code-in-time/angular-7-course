@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { increment, decrement, reset } from '../actions/counter.actions';
- 
+
 export const initialState = 0;
  
 const _counterReducer = createReducer(initialState,
